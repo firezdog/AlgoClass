@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ThreeSum<PrincetonAlgo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "Week1.dynamicConnectivity",
+            "projectName": "PrincetonAlgo",
+            "args": "https://algs4.cs.princeton.edu/15uf/mediumUF.txt"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ThreeSumWithBinarySearch<PrincetonAlgo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "Week1.ThreeSumWithBinarySearch",
+            "projectName": "PrincetonAlgo",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-binarySearch<PrincetonAlgo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "Week1.binarySearch",
+            "projectName": "PrincetonAlgo",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-binarySearch2<PrincetonAlgo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "Week1.binarySearch2",
+            "projectName": "PrincetonAlgo",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 0
+        }
+    ]
+}
