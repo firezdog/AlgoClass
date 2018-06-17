@@ -50,8 +50,6 @@ public class percolationTest {
 		//down edge case
 		assertFalse(perc.checkDown(2, 1));
 		
-		perc.printGrid();
-		
 	}
 	
 	@Test
@@ -66,6 +64,35 @@ public class percolationTest {
 		assertTrue(perc.isConnected(2, 0, 2, 2));
 		assertFalse(perc.isConnected(0, 0, 1, 0));
 		assertFalse(perc.isConnected(1, 2, 2, 0));
+	}
+	
+	@Test
+	public void checkConnectionworks() {
+		perc.open(1, 1);
+		perc.open(1, 2);
+		perc.open(2, 1);
+		assertTrue(perc.isConnected(1, 1, 2, 1));
+		assertFalse(perc.isConnected(2, 1, 1, 0));
+		assertFalse(perc.isConnected(1, 2, 0, 0));
+	}
+	
+	@Test
+	public void checkIsFull() {
+		assertFalse(perc.isFull(1, 1));
+		perc.open(1, 1);
+		perc.open(0, 1);
+		assertTrue(perc.isFull(1, 1));
+	}
+	
+	@Test
+	public void checkPercolates() {
+		perc.printGrid();
+		assertFalse(perc.percolates(1, 1));
+		perc.open(0, 1);
+		perc.open(1, 1);
+		perc.open(2, 1);
+		assertTrue(perc.percolates(1, 1));
+		assertFalse(perc.percolates(1, 2));
 	}
 
 }

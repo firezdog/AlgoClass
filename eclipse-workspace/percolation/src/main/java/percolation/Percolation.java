@@ -18,7 +18,12 @@ public class Percolation {
 		}
 	}
 	
-	public void isFull(int row, int col) {
+	public boolean percolates(int row, int col) {
+		return isConnected(row,col,n-1,n-1);
+	}
+	
+	public boolean isFull(int row, int col) {
+		return isConnected(row, col, 0, 0);
 	}
 	
 	public int entryToInt(int row, int col) {
