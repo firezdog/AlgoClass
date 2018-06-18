@@ -85,12 +85,11 @@ public class percolationTest {
 	
 	@Test
 	public void checkPercolates() {
-		assertFalse(perc.percolates(1, 1));
-		perc.open(0, 1);
 		perc.open(1, 1);
+		perc.open(0, 1);
+		assertFalse(perc.percolates());
 		perc.open(2, 1);
-		assertTrue(perc.percolates(1, 1));
-		assertFalse(perc.percolates(1, 2));
+		assertTrue(perc.percolates());
 	}
 
 }

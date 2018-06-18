@@ -10,13 +10,19 @@ public class statsTest {
 	
 	@Before
 	public void setup() {
-		stat = new PercolationStats(8,2);
+		stat = new PercolationStats(4,2);
 	}
 	
+//	@Test
+//	public void test_openRandom() {
+//		int[] opened = stat.openRandom();
+//		assertTrue(stat.perc.isOpen(opened[0], opened[1]));
+//		assertEquals(stat.openSites,1);
+//	}
+	
 	@Test
-	public void test_openRandom() {
-		int[] opened = stat.openRandom();
-		assertTrue(stat.perc.isOpen(opened[0], opened[1]));
+	public void test_experiment_flow() {
+		stat.printTrialRatios();
 	}
 
 }

@@ -18,8 +18,8 @@ public class Percolation {
 		}
 	}
 	
-	public boolean percolates(int row, int col) {
-		return isConnected(row,col,n-1,n-1);
+	public boolean percolates() {
+		return isFull(n-1,n-1);
 	}
 	
 	public boolean isFull(int row, int col) {
@@ -43,13 +43,14 @@ public class Percolation {
 		qu.union(node1, node2);
 	}
 	
-	public void open(int row, int col) {
-		if (grid[row][col] == 1) return;
+	public boolean open(int row, int col) {
+		if (grid[row][col] == 1) return false;
 		grid[row][col] = 1;
 		if (checkUp(row, col)) connect(row,col,row-1,col); 
 		if (checkDown(row, col)) connect(row,col,row+1,col); 
 		if (checkLeft(row, col)) connect(row,col,row,col-1); 
 		if (checkDown(row, col)) connect(row,col,row,col+1); 
+		return true;
 	}
 	
 	//begin isOpen and subordinate methods.
