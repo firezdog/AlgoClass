@@ -39,10 +39,12 @@ public class Percolation {
 	public void connect(int row1, int col1, int row2, int col2) {
 		int node1 = entryToInt(row1, col1);
 		int node2 = entryToInt(row2, col2);
+		if (qu.connected(node1, node2)) return;
 		qu.union(node1, node2);
 	}
 	
 	public void open(int row, int col) {
+		if (grid[row][col] == 1) return;
 		grid[row][col] = 1;
 		if (checkUp(row, col)) connect(row,col,row-1,col); 
 		if (checkDown(row, col)) connect(row,col,row+1,col); 

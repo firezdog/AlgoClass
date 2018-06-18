@@ -1,7 +1,6 @@
 package percolation;
 
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -86,7 +85,6 @@ public class percolationTest {
 	
 	@Test
 	public void checkPercolates() {
-		perc.printGrid();
 		assertFalse(perc.percolates(1, 1));
 		perc.open(0, 1);
 		perc.open(1, 1);
