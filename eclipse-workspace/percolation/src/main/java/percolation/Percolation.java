@@ -49,7 +49,7 @@ public class Percolation {
 		if (checkUp(row, col)) connect(row,col,row-1,col); 
 		if (checkDown(row, col)) connect(row,col,row+1,col); 
 		if (checkLeft(row, col)) connect(row,col,row,col-1); 
-		if (checkDown(row, col)) connect(row,col,row,col+1); 
+		if (checkRight(row, col)) connect(row,col,row,col+1); 
 		return true;
 	}
 	
