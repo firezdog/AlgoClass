@@ -31,7 +31,7 @@ public class Node<Item> {
 		oldLast.next = last;
 		
 		//Traversal
-		for (Node x = first; x != null; x = x.next) {
+		for (Node<String> x = first; x != null; x = x.next) {
 			System.out.println(x.item);
 		}
 	}

@@ -2,6 +2,8 @@ package week2;
 
 //Actually this is a linked STACK of strings.
 
+//Each operation is O(1)
+
 public class LinkedListStrings {
 	private Node first = null;
 	
