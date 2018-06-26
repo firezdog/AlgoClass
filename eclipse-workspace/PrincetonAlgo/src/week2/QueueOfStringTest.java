@@ -7,11 +7,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class QueueOfStringTest {
-	public QueueOfStrings q;
+	public QueueOfStrings2 q;
 	
 	@BeforeEach
 	void prepare() {
-		q = new QueueOfStrings();		
+		q = new QueueOfStrings2();		
 	}
 	
 	@Test
