@@ -7,15 +7,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class QueueOfStringTest {
-	public QueueOfStrings2 q;
+	public ArrayQueue q;
 	
 	@BeforeEach
 	void prepare() {
-		q = new QueueOfStrings2();		
+		q = new ArrayQueue();		
 	}
 	
 	@Test
-	@DisplayName("isEmpty should return is empty when empty")
+	@DisplayName("isEmpty should return null when empty")
 	void test_isEmpty() {
 		assertEquals(q.isEmpty(),true);
 		q.enqueue("hello");
