@@ -1,6 +1,7 @@
 package week2;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -64,4 +65,47 @@ public class QueueOfStringTest {
 		assertEquals(q.dequeue(),null);
 	}
 	
+	@Test
+	@DisplayName("checking for edge case: dequeue all and requeue")
+	void test_edge_case() {
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		assertEquals(q.printQueue(),"1 1 1 1 1 null null null ");
+	}
+	
+	@Test
+	@DisplayName("checking for edge case: head should not pass tail on dequeue")
+	void test_edge_case_head_vs_tail() {
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.enqueue("1");
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		assertTrue(q.isEmpty());
+		assertEquals(q.getHead(),q.getTail());
+	}
 }
